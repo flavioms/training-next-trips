@@ -10,7 +10,6 @@ export default function Home({ places }: MapProps) {
 
 export const getStaticProps = async () => {
   const { places } = await client.request<GetPlacesQuery>(GET_PLACES)
-  console.log(places)
   return {
     props: {
       places
